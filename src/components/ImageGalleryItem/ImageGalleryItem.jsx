@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import css from './ImageGalleryItem.module.css';
-import { incrimentpage } from '../Button/Button';
+// import { incrimentpage } from '../Button/Button';
 
 export class ImageGalleryItem extends Component {
   state = {
