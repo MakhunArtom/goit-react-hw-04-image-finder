@@ -7,7 +7,6 @@ import { Button } from '../Button/Button';
 export class ImageGallery extends Component {
   state = {
     isOpen: false,
-    // modalImg: '',
   };
 
   img = '';
@@ -17,7 +16,6 @@ export class ImageGallery extends Component {
       return;
     }
 
-    // this.setState({ modalImg: e.target.dataset.source });
     this.img = e.target.dataset.source;
     this.togelModal();
   };
@@ -29,7 +27,7 @@ export class ImageGallery extends Component {
   };
 
   render() {
-    const { isOpen, modalImg } = this.state;
+    const { isOpen } = this.state;
     const { imeges, incrimentpage } = this.props;
 
     return (
