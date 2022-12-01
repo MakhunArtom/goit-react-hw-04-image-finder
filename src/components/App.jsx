@@ -10,14 +10,13 @@ export class App extends Component {
     sourceName: '',
     imeges: [],
     page: 1,
-    error: null,
+    // error: null,
     status: 'idel',
   };
 
   componentDidUpdate(prevProps, prevState) {
     if (
-      prevState.sourceName !== this.state.sourceName
-      ||
+      prevState.sourceName !== this.state.sourceName ||
       prevState.page !== this.state.page
     ) {
       const { sourceName, page } = this.state;
@@ -54,13 +53,12 @@ export class App extends Component {
   };
 
   render() {
-    const { error, status, imeges } = this.state;
+    const { status, imeges } = this.state;
 
     return (
       <div className={css.App}>
         <Searchbar hendelFormSubmit={this.hendelFormSubmit} />
 
-        {/* {status === 'idel' && <h2>Введте запрос</h2>} */}
         {status === 'resolved' && (
           <ImageGallery imeges={imeges} incrimentpage={this.incrimentpage} />
         )}
