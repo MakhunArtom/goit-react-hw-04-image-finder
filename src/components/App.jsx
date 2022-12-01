@@ -16,7 +16,8 @@ export class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (
-      prevState.sourceName !== this.state.sourceName ||
+      prevState.sourceName !== this.state.sourceName
+      ||
       prevState.page !== this.state.page
     ) {
       const { sourceName, page } = this.state;
