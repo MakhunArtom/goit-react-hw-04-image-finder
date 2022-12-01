@@ -1,0 +1,10 @@
+.icon__spin {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    margin-right: 5px;
+}
