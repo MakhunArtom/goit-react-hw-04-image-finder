@@ -38,7 +38,10 @@ export class App extends Component {
             this.setState({ status: 'resolved' })
           );
         })
-        .catch(error => this.setState({ error, status: 'rejected' }));
+        .catch(error => {
+          this.setState({ error, status: 'rejected' });
+          alert('Чтото пощло не так');
+        });
     }
   }
 
